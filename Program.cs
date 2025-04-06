@@ -36,6 +36,7 @@ class Program
         };
 
 #TESTECarina
+#TESTEINES
 
         await discord.ConnectAsync();
         await Task.Delay(-1);
