@@ -32,8 +32,10 @@ class Program
             else if (e.Message.Content.ToLower().Contains("bom dia") && !e.Author.IsBot)
             {
                 await e.Message.RespondAsync("Bom dia! :wave: ");
-            }         
+            }
         };
+
+#TESTECarina
 
         await discord.ConnectAsync();
         await Task.Delay(-1);
