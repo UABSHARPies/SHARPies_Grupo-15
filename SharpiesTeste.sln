@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpiesTeste", "SharpiesTeste.csproj", "{3A6AE97C-8ABF-42DD-B1CA-0676597FE240}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "models", "models", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "view", "view", "{FD2AF57E-1065-4916-B493-078A5121AB8A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "controller", "controller", "{28D47460-CA43-4E0A-9787-4B79C7574121}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3A6AE97C-8ABF-42DD-B1CA-0676597FE240}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A6AE97C-8ABF-42DD-B1CA-0676597FE240}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A6AE97C-8ABF-42DD-B1CA-0676597FE240}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A6AE97C-8ABF-42DD-B1CA-0676597FE240}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AC11BFA3-3AC0-491B-A1B1-BCC1A92074A5}
+	EndGlobalSection
+EndGlobal
