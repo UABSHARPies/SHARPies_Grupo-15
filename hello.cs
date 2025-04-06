@@ -6,7 +6,7 @@ namespace HelloWorldApp
 	{
 		static void Main(string[] args)
 		{
-			Console.WriteLine("Está a dar merda da Grossa!");
+			Console.WriteLine("Está a dar merdinha da Grossa!");
 		}
 	}
 }
