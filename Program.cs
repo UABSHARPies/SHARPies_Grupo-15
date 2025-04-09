@@ -37,6 +37,7 @@ class Program
 
 #TESTECarina
 #TESTEINES
+#TesteRicardo
 
         await discord.ConnectAsync();
         await Task.Delay(-1);

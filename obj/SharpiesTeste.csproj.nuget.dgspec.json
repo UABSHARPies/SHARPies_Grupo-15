@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "G:\\c#\\SharpiesTeste\\SharpiesTeste.csproj": {}
+    "E:\\Documentos\\GitHub\\SHARPies_Grupo-15\\SharpiesTeste.csproj": {}
   },
   "projects": {
-    "G:\\c#\\SharpiesTeste\\SharpiesTeste.csproj": {
+    "E:\\Documentos\\GitHub\\SHARPies_Grupo-15\\SharpiesTeste.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\c#\\SharpiesTeste\\SharpiesTeste.csproj",
+        "projectUniqueName": "E:\\Documentos\\GitHub\\SHARPies_Grupo-15\\SharpiesTeste.csproj",
         "projectName": "SharpiesTeste",
-        "projectPath": "G:\\c#\\SharpiesTeste\\SharpiesTeste.csproj",
-        "packagesPath": "C:\\Users\\yrmam\\.nuget\\packages\\",
-        "outputPath": "G:\\c#\\SharpiesTeste\\obj\\",
+        "projectPath": "E:\\Documentos\\GitHub\\SHARPies_Grupo-15\\SharpiesTeste.csproj",
+        "packagesPath": "C:\\Users\\balse\\.nuget\\packages\\",
+        "outputPath": "E:\\Documentos\\GitHub\\SHARPies_Grupo-15\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\yrmam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\balse\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
