@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SharpiesTeste")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7eae910161f4617e70eeb6305b679f952cbbac54")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6ee939bd073e9e61af2adcc181764e22ab2f0327")]
 [assembly: System.Reflection.AssemblyProductAttribute("SharpiesTeste")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SharpiesTeste")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,0 +1,6 @@
+C:\Users\yrmam\OneDrive - Universidade Aberta\2 ano\S2\Laboratório de desenvolvimento de software\GitHub\SHARPies_Grupo-15\BotTeste\obj\Debug\net8.0\SharpiesTeste.csproj.AssemblyReference.cache
+C:\Users\yrmam\OneDrive - Universidade Aberta\2 ano\S2\Laboratório de desenvolvimento de software\GitHub\SHARPies_Grupo-15\BotTeste\obj\Debug\net8.0\SharpiesTeste.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yrmam\OneDrive - Universidade Aberta\2 ano\S2\Laboratório de desenvolvimento de software\GitHub\SHARPies_Grupo-15\BotTeste\obj\Debug\net8.0\SharpiesTeste.AssemblyInfoInputs.cache
+C:\Users\yrmam\OneDrive - Universidade Aberta\2 ano\S2\Laboratório de desenvolvimento de software\GitHub\SHARPies_Grupo-15\BotTeste\obj\Debug\net8.0\SharpiesTeste.AssemblyInfo.cs
+C:\Users\yrmam\OneDrive - Universidade Aberta\2 ano\S2\Laboratório de desenvolvimento de software\GitHub\SHARPies_Grupo-15\BotTeste\obj\Debug\net8.0\SharpiesTeste.csproj.CoreCompileInputs.cache
+C:\Users\yrmam\OneDrive - Universidade Aberta\2 ano\S2\Laboratório de desenvolvimento de software\GitHub\SHARPies_Grupo-15\BotTeste\obj\Debug\net8.0\SharpiesTeste.sourcelink.json

@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\yrmam\\OneDrive - Universidade Aberta\\2 ano\\S2\\Laborat\u00F3rio de desenvolvimento de software\\GitHub\\SHARPies_Grupo-15\\BotTeste\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3A6AE97C-8ABF-42DD-B1CA-0676597FE240}|SharpiesTeste.csproj|c:\\users\\yrmam\\onedrive - universidade aberta\\2 ano\\s2\\laborat\u00F3rio de desenvolvimento de software\\github\\sharpies_grupo-15\\botteste\\sharpiesteste.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{3A6AE97C-8ABF-42DD-B1CA-0676597FE240}|SharpiesTeste.csproj|solutionrelative:sharpiesteste.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -31,7 +36,7 @@
         },
         {
           "DockedWidth": 132,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -40,6 +45,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:130:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SharpiesTeste",
+              "DocumentMoniker": "C:\\Users\\yrmam\\OneDrive - Universidade Aberta\\2 ano\\S2\\Laborat\u00F3rio de desenvolvimento de software\\GitHub\\SHARPies_Grupo-15\\BotTeste\\SharpiesTeste.csproj",
+              "RelativeDocumentMoniker": "SharpiesTeste.csproj",
+              "ToolTip": "C:\\Users\\yrmam\\OneDrive - Universidade Aberta\\2 ano\\S2\\Laborat\u00F3rio de desenvolvimento de software\\GitHub\\SHARPies_Grupo-15\\BotTeste\\SharpiesTeste.csproj",
+              "RelativeToolTip": "SharpiesTeste.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-09T19:59:33.544Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
