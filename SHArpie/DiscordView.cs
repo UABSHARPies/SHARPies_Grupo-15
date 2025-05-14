@@ -4,6 +4,29 @@ using DSharpPlus;
 using DSharpPlus.Entities;
 using DSharpPlus.EventArgs;
 
+
+
+// Interface que representa uma interação genérica (utilizador + data)
+public interface IInteracao
+{
+    string Utilizador { get; }
+    DateTime Timestamp { get; }
+}
+
+// Implementação concreta para interações do Discord
+public class InteracaoDiscord : IInteracao
+{
+    public string Utilizador { get; }
+    public DateTime Timestamp { get; }
+
+    public InteracaoDiscord(string utilizador, DateTime timestamp)
+    {
+        Utilizador = utilizador;
+        Timestamp = timestamp;
+    }
+}
+
+
 /// <summary>
 /// Camada de View responsável pela comunicação com o Discord.
 /// </summary>
@@ -60,7 +83,9 @@ public class DiscordView
                     !mensagem.Content.StartsWith("!") &&
                     mensagem.Timestamp.UtcDateTime > dataUltimaContagem)
                 {
-                    model.RegistarMensagem(mensagem.Author.Username); // Registar interação
+                    var interacao = new InteracaoDiscord(mensagem.Author.Username, mensagem.Timestamp.UtcDateTime);
+                    model.RegistarInteracao(interacao);
+                    // Registar interação
                 }
             }
 
