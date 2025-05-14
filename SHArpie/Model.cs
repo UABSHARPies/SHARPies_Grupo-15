@@ -76,6 +76,13 @@ public class Model
         GuardarDados();
     }
 
+    // Recebe uma interação genérica (via interface) e regista-a
+    public void RegistarInteracao(IInteracao interacao)
+    {
+        RegistarMensagem(interacao.Utilizador);
+    }
+
+
     /// <summary>
     /// Atualiza as interações de um utilizador (alias para RegistarMensagem).
     /// </summary>
@@ -168,4 +175,6 @@ public class Model
         public Dictionary<string, int> Interacoes { get; set; }
         public DateTime DataUltimaContagem { get; set; }
     }
+
 }
+   
