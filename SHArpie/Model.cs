@@ -10,7 +10,7 @@ using System.Text.Json;
 public class Model
 {
     private Dictionary<string, int> interacoes; // Guarda o número de mensagens enviadas por cada utilizador
-    private static readonly string FicheiroDados = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "interacoes.json");// Nome do ficheiro onde os dados serão guardados
+    private static readonly string FicheiroDados = Path.Combine("dados", "interacoes.json"); // Caminho atualizado do ficheiro de dados
 
     public DateTime DataUltimaContagem { get; private set; } // Data da última contagem de mensagens registada
 
@@ -19,6 +19,9 @@ public class Model
     /// </summary>
     public Model()
     {
+        // Garante que a pasta "dados" existe
+        Directory.CreateDirectory("dados");
+
         if (File.Exists(FicheiroDados))
         {
             try
@@ -81,7 +84,6 @@ public class Model
     {
         RegistarMensagem(interacao.Utilizador);
     }
-
 
     /// <summary>
     /// Atualiza as interações de um utilizador (alias para RegistarMensagem).
@@ -175,6 +177,4 @@ public class Model
         public Dictionary<string, int> Interacoes { get; set; }
         public DateTime DataUltimaContagem { get; set; }
     }
-
 }
-   

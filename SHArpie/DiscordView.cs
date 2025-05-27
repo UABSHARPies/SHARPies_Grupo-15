@@ -46,54 +46,83 @@ public class DiscordView
     /// <param name="model">Instância do Model para registar interações do histórico.</param>
     public async Task IniciarAsync(DateTime dataUltimaContagem, Model model)
     {
-        // Configuração do cliente Discord
         client = new DiscordClient(new DiscordConfiguration()
         {
-            Token = "", // ⚠️ Substituir pelo token correto
+            Token = "", // Insira o seu token do bot aqui
             TokenType = TokenType.Bot,
             Intents = DiscordIntents.AllUnprivileged | DiscordIntents.MessageContents
         });
 
-        // Subscrição do evento de nova mensagem criada
         client.MessageCreated += OnMessageCreatedAsync;
-
-        // Conectar o cliente ao Discord
         await client.ConnectAsync();
 
-        // Obter o servidor (Guild) e os canais
         var guild = await client.GetGuildAsync(1345133246199107635);
         var canais = await guild.GetChannelsAsync();
 
-        // Procurar o canal chamado "comandosbot"
-        canalPadrao = canais.FirstOrDefault(c => c.Type == ChannelType.Text && c.Name == "comandosbot");
+        bool houveMensagens = false;
 
-        // Se o canal existir, vamos processar as mensagens antigas
-        if (canalPadrao != null)
+        foreach (var canal in canais)
         {
-            // Buscar até 500 mensagens recentes
-            var mensagens = await canalPadrao.GetMessagesAsync(500);
-
-            foreach (var mensagem in mensagens)
+            // Verificar canais de texto normais ou canais de voz com chat embutido
+            if (canal.Type == ChannelType.Text || canal.Type == ChannelType.Voice)
             {
-                // Só contabilizar mensagens:
-                // - Que não sejam do próprio bot
-                // - Que não sejam comandos (não comecem por "!")
-                // - Que sejam posteriores à última contagem conhecida
-                if (!mensagem.Author.IsBot &&
-                    !mensagem.Content.StartsWith("!") &&
-                    mensagem.Timestamp.UtcDateTime > dataUltimaContagem)
+                try
                 {
-                    var interacao = new InteracaoDiscord(mensagem.Author.Username, mensagem.Timestamp.UtcDateTime);
-                    model.RegistarInteracao(interacao);
-                    // Registar interação
+                    var mensagens = await canal.GetMessagesAsync(500);
+
+                    foreach (var mensagem in mensagens)
+                    {
+                        if (!mensagem.Author.IsBot &&
+                            !mensagem.Content.StartsWith("!") &&
+                            mensagem.Timestamp.UtcDateTime > dataUltimaContagem)
+                        {
+                            var interacao = new InteracaoDiscord(mensagem.Author.Username, mensagem.Timestamp.UtcDateTime);
+                            model.RegistarInteracao(interacao);
+                            houveMensagens = true;
+                        }
+                    }
+
+                    // Salvar canal padrão se for comandosbot
+                    if (canal.Type == ChannelType.Text && canal.Name == "comandosbot" && canalPadrao == null)
+                    {
+                        canalPadrao = canal;
+                    }
+
+                    // ⚡ Threads dentro de canais de texto
+                    if (canal.Type == ChannelType.Text && canal.Threads != null)
+                    {
+                        foreach (var thread in canal.Threads)
+                        {
+                            var mensagensThread = await thread.GetMessagesAsync(500);
+
+                            foreach (var mensagem in mensagensThread)
+                            {
+                                if (!mensagem.Author.IsBot &&
+                                    !mensagem.Content.StartsWith("!") &&
+                                    mensagem.Timestamp.UtcDateTime > dataUltimaContagem)
+                                {
+                                    var interacao = new InteracaoDiscord(mensagem.Author.Username, mensagem.Timestamp.UtcDateTime);
+                                    model.RegistarInteracao(interacao);
+                                    houveMensagens = true;
+                                }
+                            }
+                        }
+                    }
+
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"[ERRO] Falha ao processar canal {canal.Name}: {ex.Message}");
                 }
             }
+        }
 
-            // Atualizar a data de última contagem após tratar o histórico
+        if (houveMensagens)
+        {
             model.AtualizarDataUltimaContagem();
         }
 
-        // Manter o bot ativo indefinidamente
         await Task.Delay(-1);
     }
 
